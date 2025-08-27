@@ -1,0 +1,14 @@
+from PIL import Image
+import numpy as np
+
+
+def ft_load(path: str) -> np.ndarray:
+    """
+        ft_load(path)
+        Open an image with its path and get its size
+        and its pixels content in RGB format
+    """
+    im = Image.open(path)
+    arr = np.array(im)
+    print("The shape of image is :", arr.shape)
+    return arr

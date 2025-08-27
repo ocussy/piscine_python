@@ -6,7 +6,6 @@ def ft_filter(func, iterable):
         It works by applying a function to each element
         and keeping only those for which function returns True.
     """
-    print(ft_filter.__doc__)
     if not isinstance(iterable, (list, tuple, set, dict)):
         print("not iterable")
         return 1

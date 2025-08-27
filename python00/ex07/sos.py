@@ -42,6 +42,7 @@ def main():
         if not x.isalnum() and not x.isspace():
             print("AssertionError: the arguments are bad")
             return 1
+    print(convertToMorse.__doc__)
     convert = convertToMorse(string)
     print(convert)
 
