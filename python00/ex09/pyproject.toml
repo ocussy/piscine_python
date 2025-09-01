@@ -6,14 +6,9 @@ build-backend = "setuptools.build_meta"
 name = "ft_package"
 version = "0.0.1"
 authors = [
-    {name = "eagle", email = "eagle@42.fr"},
+    {name = "ocussy", email = "ocussy@42.fr"},
 ]
 description = "A sample test package"
 readme = "README.md"
-license = {file = "LICENSE"}
+license = {text = "MIT"}
 requires-python = ">=3.6"
-classifiers = [
-    "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
-]

@@ -1,0 +1,6 @@
+matplotlib
+numpy
+tqdm
+setuptools
+flake8
+build

@@ -12,7 +12,14 @@ def ft_tqdm(lst: range) -> None:
     total = len(lst)
     start_time = time.time()
 
+    bar_length = shutil.get_terminal_size().columns - 40
+    bar = ''.ljust(bar_length)
+    sys.stdout.write(f'\r  0%|{bar}| 0/{total} [00:00<00:00, 0.0it/s]')
+    sys.stdout.flush()
+
     for i, item in enumerate(lst):
+        yield item
+
         progress = i + 1
         percent = (progress / total) * 100
 
@@ -33,13 +40,11 @@ def ft_tqdm(lst: range) -> None:
         sys.stdout.write(
             (
                 f'\r{percent:3.0f}%|{bar}| {progress}/{total} '
-                f'[{elapsed_time:02.0f}:{elapsed_time%60:02.0f}'
+                f'[{elapsed_time//60:02.0f}:{elapsed_time%60:02.0f}'
                 f'<{eta//60:02.0f}:{eta%60:02.0f}, '
                 f'{rate:.1f}it/s]'
             )
         )
         sys.stdout.flush()
-
-        yield item
 
     print()
