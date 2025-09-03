@@ -19,4 +19,3 @@ ft_blue(array)
 
 print(ft_grey.__doc__)
 ft_grey(array)
-
