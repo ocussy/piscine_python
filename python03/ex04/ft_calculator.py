@@ -1,29 +1,16 @@
-def method_decorator(func):
-    def wrapper(*args, **kwargs):
-        res = func(*args, **kwargs)
-        return res
-    return wrapper
-
-
 class calculator:
 
-    @method_decorator
-    def dotproduct(V1: list[float], V2: list[float]) -> None:
-        result = 0
-        for x, y in zip(V1, V2):
-            result += x * y
+    @staticmethod
+    def dotproduct(a, b) -> None:
+        result = sum(float(x) * float(y) for x, y in zip(a, b))
         print("Dot product is:", result)
 
-    @method_decorator
-    def add_vec(V1: list[float], V2: list[float]) -> None:
-        result = []
-        for x, y in zip(V1, V2):
-            result.append(x + y)
+    @staticmethod
+    def add_vec(a, b) -> None:
+        result = [float(x) + float(y) for x, y in zip(a, b)]
         print("Add Vector is:", result)
 
-    @method_decorator
-    def sous_vec(V1: list[float], V2: list[float]) -> None:
-        result = []
-        for x, y in zip(V1, V2):
-            result.append(x - y)
+    @staticmethod
+    def sous_vec(a, b) -> None:
+        result = [float(x) - float(y) for x, y in zip(a, b)]
         print("Sous Vector is:", result)

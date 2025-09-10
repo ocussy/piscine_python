@@ -11,12 +11,14 @@ class Baratheon(Character):
         self.hair = "dark"
 
     def __str__(self):
-        return f"Str vector: ('{self.family_name}', \
-                '{self.hair}', '{self.eyes}')"
+        return (
+            f"{self.first_name} {self.family_name} has "
+            f"{self.hair} hair and {self.eyes} eyes"
+        )
 
     def __repr__(self):
-        return f"Repr vector: ('{self.family_name}', \
-                '{self.hair}', '{self.eyes}')"
+        return (f"Baratheon(family_name={self.family_name},"
+                f"hair={self.hair}, eyes={self.eyes})")
 
     def die(self):
         """ Method that passes is_alive from True to False"""
@@ -37,10 +39,14 @@ class Lannister(Character):
         return cls(first_name, is_alive)
 
     def __str__(self):
-        return f"Vector: ('{self.family_name})', '{self.hair}', '{self.eyes}')"
+        return (
+            f"{self.first_name} {self.family_name} has "
+            f"{self.hair} hair and {self.eyes} eyes"
+        )
 
     def __repr__(self):
-        return f"Vector: ('{self.family_name}', '{self.hair}', '{self.eyes}')"
+        return (f"Lannister(family_name={self.family_name},"
+                f"hair={self.hair}, eyes={self.eyes})")
 
     def die(self):
         """ Method that passes is_alive from True to False"""
