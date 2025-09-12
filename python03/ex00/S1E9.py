@@ -2,6 +2,8 @@ from abc import ABC, abstractmethod
 
 
 class Character(ABC):
+    """ Creates a character with a name
+        and a status of health state (True/False) """
     def __init__(self, first_name, is_alive=True):
         """ Creates a character with a name
         and a status of health state (True/False) """
